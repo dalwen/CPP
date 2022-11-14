@@ -17,6 +17,7 @@ main() {
   Unknown(&trouble[0], *q);
 
   cout << *q << " " << trouble[0] << " " << trouble[2];
+  
 }
 
 
