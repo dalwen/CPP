@@ -1,8 +1,10 @@
 #include "FollowPointer.hpp"
 #include "ArrayElement.hpp"
-
+#include "Node.hpp"
 
 int main() {
   //FollowPointer();
-  GetGrade();
+  //GetGrade();
+  NodeTest();
+  NodeTest1();
 }

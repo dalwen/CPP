@@ -4,7 +4,7 @@ project(PlayGround VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-set(SOURCES main.cpp FollowPointer.cpp ArrayElement.cpp)
+set(SOURCES main.cpp FollowPointer.cpp ArrayElement.cpp Node.cpp)
 add_executable(PlayGround ${SOURCES} )
 target_include_directories(PlayGround PRIVATE headerdir/)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
