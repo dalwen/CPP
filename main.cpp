@@ -1,6 +1,8 @@
 #include "FollowPointer.hpp"
-using namespace std;
+#include "ArrayElement.hpp"
+
 
 int main() {
-  FollowPointer();
+  //FollowPointer();
+  GetGrade();
 }
