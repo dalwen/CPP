@@ -19,6 +19,7 @@ void push(Node **head_ref, int new_data)
     (*head_ref) = new_node;
 }
 
+
 void insertAfter(Node *prev_node, int new_data)
 {
     // 1. check if the given prev_node
@@ -262,6 +263,52 @@ void print(Node*& head)
     cout << "NULL" << endl;
 }
 
+// A tail recursive function to count the nodes of a linked
+// list
+// default value of the count is used as zero
+int GetCount(Node* head, int count = 0)
+{
+    // base case
+    if (head == NULL)
+        return count;
+    // move the pointer to next node and increase the count
+    return GetCount(head->next, count + 1);
+}
+
+// Detectloop by Floyd’s Cycle Finding Algorithm
+int detectLoop(Node* list)
+{
+    Node *slow_p = list, *fast_p = list;
+ 
+    while (slow_p && fast_p && fast_p->next) {
+        slow_p = slow_p->next;
+        fast_p = fast_p->next->next;
+        if (slow_p == fast_p) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+void LoopTest() 
+{
+    /* Start with the empty list */
+    Node* head = NULL;
+ 
+    push(&head, 20);
+    push(&head, 4);
+    push(&head, 15);
+    push(&head, 10);
+ 
+    /* Create a loop for testing */
+    head->next->next->next->next = head;
+    if (detectLoop(head))
+        cout << "Loop Found";
+    else
+        cout << "No Loop";
+    return 0;
+}
+
 void NodeTest1() 
 {
     // Declaring an empty linked list
@@ -289,4 +336,7 @@ void NodeTest1()
     cout << "After deletion at a given position: ";
     print(head);
     cout << endl;
+
+    cout << "List length:" << GetCount(head) << endl;
 }
+
