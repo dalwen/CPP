@@ -306,7 +306,7 @@ void LoopTest()
         cout << "Loop Found";
     else
         cout << "No Loop";
-    return 0;
+    return;
 }
 
 void NodeTest1() 
