@@ -2,6 +2,7 @@
 #include "ArrayElement.hpp"
 #include "Node.hpp"
 #include "RvalueRef.hpp"
+#include "RefTest.hpp"
 
 int main()
 {
@@ -12,4 +13,7 @@ int main()
 
   RvalueRef r;
   r.RunTest();
+
+  RefTest t;
+  t.RunTest();
 }

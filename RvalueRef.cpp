@@ -149,5 +149,8 @@ void Test2()
 
 void RvalueRef::RunTest()
 {
-    Test2();
+    int&& a = 6;
+    //a++;
+    printf("%d\n", a++);
+    //Test2();
 }
