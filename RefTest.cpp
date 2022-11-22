@@ -35,4 +35,12 @@ void RefTest::RunTest()
     returnValue(b) = 50;
     cout << "b = " << b <<endl;
 
+    int x = 4;
+    auto &r = x;
+    r += 2;
+    cout << "x = " << x <<endl;
+    auto y = x * x;
+    cout << "y = " << y <<endl;
+
+
 }

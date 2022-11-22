@@ -3,6 +3,7 @@
 #include "Node.hpp"
 #include "RvalueRef.hpp"
 #include "RefTest.hpp"
+#include "TemplateTest.hpp"
 
 int main()
 {
@@ -11,9 +12,14 @@ int main()
   // NodeTest();
   // NodeTest1();
 
-  RvalueRef r;
-  r.RunTest();
+  //RvalueRef r;
+  //r.RunTest();
 
-  RefTest t;
+  //RefTest t;
+  //t.RunTest();
+
+  TemplateTest<float> a; // Bad. 
+  TemplateTest<float> t(8.5);
   t.RunTest();
+
 }
