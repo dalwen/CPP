@@ -13,7 +13,7 @@ public:
 
     void RunTest() // https://isocpp.org/wiki/faq/templates#templates-defn-vs-decl
     {
-        cout << "Got " << typeid(TemplateTest::number).name() << " with value " << TemplateTest::GetNumber() << endl;
+        cout << "Got " << typeid(GetNumber()).name() << " with value " << GetNumber() << endl;
     }
 
     T GetNumber() { return number; }
